@@ -60,10 +60,24 @@ ul {
   margin: 0 auto;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* HEADER */
 .header {
   background-color: var(--white);
   padding: 24px 0;
+  border-bottom: 1px solid var(--cornflower);
 }
 
 .header__content {
@@ -145,13 +159,29 @@ ul {
   color: var(--iris);
 }
 
-/* MAIN PAGE */
-.hero {
+.section {
+  padding: 120px 0;
+}
+
+.section--hero {
+  padding: 188px 0;
   background-color: var(--navy-blue);
 }
 
+.section--projects {
+  padding-top: 96px;
+}
+
+.section--jobs {
+  padding-top: 0;
+}
+
+.section--team {
+  background-color: var(--cloud);
+}
+
+/* MAIN PAGE */
 .hero__content {
-  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -159,7 +189,7 @@ ul {
   gap: 48px;
 }
 
-.hero h1 {
+.hero__content h1 {
   color: var(--white);
   font-weight: 700;
   font-size: 56px;
@@ -179,16 +209,12 @@ ul {
   box-shadow: var(--button-hover-shadow);
 }
 
-.description {
-  margin: 120px 0;
-}
-
 .description__wrapper {
   display: flex;
   gap: 24px;
 }
 
-.description h3 {
+.description__wrapper h3 {
   color: var(--navy-blue);
   font-weight: 500;
   font-size: 20px;
@@ -204,18 +230,9 @@ ul {
   margin-bottom: 72px;
 }
 
-.jobs {
-  margin-bottom: 120px;
-}
-
 .jobs__image-wrapper {
   display: flex;
   justify-content: space-between;
-}
-
-.team {
-  background-color: var(--cloud);
-  padding: 120px 0;
 }
 
 .team__image-wrapper {
@@ -245,10 +262,6 @@ ul {
 }
 
 /* PORTFOLIO PAGE */
-.projects {
-  padding: 96px 0 120px 0;
-}
-
 .projects__wrapper {
   display: grid;
   grid-template-columns: repeat(3, minmax(200px, 1fr));
