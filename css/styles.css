@@ -30,6 +30,10 @@ p {
   margin: 0;
 }
 
+address {
+  font-style: normal;
+}
+
 a {
   color: var(--slate);
   text-decoration: none;
@@ -86,7 +90,7 @@ ul {
   align-items: center;
 }
 
-.header__nav-wrapper {
+.header__nav {
   display: flex;
   gap: 76px;
 }
@@ -118,7 +122,7 @@ ul {
   color: var(--iris);
 }
 
-.header__contacts,
+.header__contacts ul,
 .header__nav ul {
   display: flex;
   gap: 40px;
@@ -190,6 +194,7 @@ ul {
 }
 
 .hero__content h1 {
+  max-width: 45%;
   color: var(--white);
   font-weight: 700;
   font-size: 56px;
